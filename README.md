@@ -9,7 +9,8 @@
 - Ensure node is installed in your local machine and clone the git repo using : ```https://github.com/vandanachandola/fetch-rewards-coding-challenge.git```.
 - Go to the root directory of the local repo and install npm dependencies using : ```npm install```.
 - Run the project using the command : ```npm start``` or ```node index.js```. The terminal should display "listening on port 3000" message.
-- Navigate to the URL ```http://localhost:3000``` and use the routes provided below to use the web service.
+- While running, run the command ```npm test``` in a new terminal to run tests.
+- Navigate to the URL ```http://localhost:3000``` in the browser and use the routes provided below to use the web service.
 
 ## Routes Provided
 1. `/api/transaction` - HTTP POST request to add transactions for a specific payer and date.
@@ -23,3 +24,7 @@
 3. `/api/balances` - HTTP GET request to return all payer point balances.
   #### Example : ```http://localhost:3000/api/balances```  
   ![Balances](screenshots/balances.jpg)
+  
+## Running Tests
+Run tests using the command `npm test`.
+  ![Test](screenshots/test.js.jpg)
