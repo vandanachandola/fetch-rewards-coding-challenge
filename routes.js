@@ -102,10 +102,14 @@ router.post(
           }
         }
         // Update the payerBalanceMap and totalAvailablePoints accordingly.
-        payerBalanceMap.set(payer, currPayerBalance + points);
-        totalAvailablePoints += points;
+        payerBalanceMap = updatePayerBalanceMap(payerBalanceMap, payer, points);
+        totalAvailablePoints = updateTotalAvailablePoints(
+          totalAvailablePoints,
+          points
+        );
       }
 
+      // if there are one or move invalid transactions return them, else send OK.
       if (invalidTransactions.length === 0) {
         res.status(HttpCodes.OK).send(allValidTransactions);
       } else {
